@@ -1,0 +1,44 @@
+  
+  #bubble1{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 20%;
+    height: 20%;
+    min-height: 200px;
+    min-width: 200px;
+
+  }
+
+  #bubble2{
+    position: relative;
+    top: 30%;
+    left: 30%;
+    width: 20%;
+    height: 20%;
+    min-height: 200px;
+    min-width: 200px;
+  }
+
+    #bubble3{
+    position: relative;
+    top: 10%;
+    left: 5%;
+    width: 8%;
+    height: 8%;
+    min-height: 200px;
+    min-width: 200px;
+  }
+
+
+
+  #bubble4{
+    position: relative;
+    top: 70%;
+    width: 10%;
+    height: 20%;
+    min-height: 200px;
+    min-width: 200px;
+  }
+
+

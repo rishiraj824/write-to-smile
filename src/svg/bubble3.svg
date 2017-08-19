@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="159px" height="160px" viewBox="0 0 159 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>bubble3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFE365" offset="0%"></stop>
+            <stop stop-color="#FF3434" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="100%" fx="50%" fy="100%" r="84.1305211%" gradientTransform="translate(0.500000,1.000000),scale(0.370238,1.000000),rotate(-90.000000),scale(1.000000,4.835008),translate(-0.500000,-1.000000)" id="radialGradient-2">
+            <stop stop-color="#FFBA52" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="2.90990779%" y1="0%" x2="109.781265%" y2="28.0127186%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FF7D35" offset="22.2647528%"></stop>
+            <stop stop-color="#FFA347" offset="72.7175647%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-292.000000, -751.000000)">
+            <g id="Group-2-Copy" transform="translate(292.000000, 751.000000)">
+                <g id="Group-4" opacity="0.95">
+                    <g id="Group-5">
+                        <g id="Group">
+                            <g id="Group-3">
+                                <ellipse id="Oval" fill="url(#linearGradient-1)" cx="79.5" cy="80.4145078" rx="79.5" ry="79.5854922"></ellipse>
+                                <path d="M80.5,35.5 C91.0345016,35.5 125,42.0634531 125,28.5725389 C125,15.0816246 105.076671,4.14507772 80.5,4.14507772 C55.9233286,4.14507772 36,15.0816246 36,28.5725389 C36,42.0634531 69.9654984,35.5 80.5,35.5 Z" id="Oval-2" fill-opacity="0.899999976" fill="url(#radialGradient-2)"></path>
+                            </g>
+                        </g>
+                        <path d="M23.3304113,28 C18.8304113,33.5 -28.6695887,101 44.3304113,147 C93.7376048,178.1333 178.830411,128 149.330411,51.5 C160.830411,94.5 131.330411,155 66.3304113,139 C-19.6695887,111.5 23.3304113,29.5 23.3304113,28 Z" id="Path-3" fill-opacity="0.310000002" fill="url(#linearGradient-3)" style="mix-blend-mode: lighten;"></path>
+                    </g>
+                </g>
+                <text id="Mental-Wellness" font-family="Roboto-Light, Roboto" font-size="20" font-weight="300" letter-spacing="2.5" fill="#FFFFFF">
+                    <tspan x="43.7763672" y="81.7823834">Mental</tspan>
+                    <tspan x="32.1503906" y="105.782383">Wellness</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
