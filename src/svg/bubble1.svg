@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="209px" height="209px" viewBox="0 0 209 209" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
-    <title>a1</title>
+    <title ref="bubbletext" >a1</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <radialGradient cx="50%" cy="35.1610512%" fx="50%" fy="35.1610512%" r="59.7659079%" gradientTransform="translate(0.500000,0.351611),scale(0.999579,1.000000),rotate(90.000000),translate(-0.500000,-0.351611)" id="radialGradient-1">
@@ -27,7 +27,7 @@
                 <path d="M105.814465,45.59375 C119.661703,45.59375 164.308176,54.2082822 164.308176,36.5014573 C164.308176,18.7946323 138.11965,4.44041451 105.814465,4.44041451 C73.509281,4.44041451 47.3207547,18.7946323 47.3207547,36.5014573 C47.3207547,54.2082822 91.9672275,45.59375 105.814465,45.59375 Z" id="a3" fill-opacity="0.899999976" fill="url(#radialGradient-2)"></path>
                 <path d="M30.6670186,35.75 C24.7519243,42.96875 -37.6851826,131.5625 58.2707922,191.9375 C123.214839,232.799956 235.06639,167 196.28966,66.59375 C211.406012,123.03125 172.629283,202.4375 87.1890312,181.4375 C-25.854994,145.34375 30.6670186,37.71875 30.6670186,35.75 Z" id="a2" fill-opacity="0.310000002" fill="url(#linearGradient-3)" style="mix-blend-mode: lighten;"></path>
                 <text font-family="Roboto-Light, Roboto" font-size="24" font-weight="300" letter-spacing="3" fill="#FFFFFF">
-                    <tspan x="32.0606329" y="113.526878">Harrasment</tspan>
+                    <tspan id="bubbletext" ref="bubbletext" x="32.0606329" y="113.526878">Harrasment</tspan>
                 </text>
             </g>
         </g>
