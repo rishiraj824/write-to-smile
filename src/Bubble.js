@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 //import './Bubbles.css';
-import {TweenMax, Power2, TimelineLite, Linear} from "gsap";
+import {TweenMax, Power2, TimelineLite, Linear, TweenLite} from "gsap";
 
 
 
 
 class Bubble extends Component {
 
-
+burst(id) {
+   //TweenLite.to('#'+id, 0.4, { scale:3, rotation:12, fillOpacity: 0});
+   //TweenLite.to('#'+id, 10, { scale:1.2, rotation:12, fillOpacity: 0});
+   TweenLite.to('#'+id, 0.4, { scale:0, rotation:12, fillOpacity: 0});
+  }
 
   componentDidMount() {
 
@@ -24,7 +28,7 @@ class Bubble extends Component {
   render() {
     return (
    
-<svg  id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
+<svg  onClick={()=>this.burst(this.props.myID)} id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient cy="35.16%" fx="50%" fy="35.16%" r="59.77%" gradientTransform="matrix(0 1 -.99958 0 .85 -.148)" id="a">
       <stop stopColor="#2D2DE4" offset="0%"/>
