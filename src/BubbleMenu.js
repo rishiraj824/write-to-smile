@@ -13,26 +13,26 @@ let type1 = {
     y1: 100 ,
     x2: 0 ,
     y2: 200 ,
-    x3: -200 ,
+    x3: -100 ,
     y3: 100 ,
     x4: 0 ,
     y4: 0
 };
 
 let type2 = {
-    x4: 50, 
-    y4: 50 ,
-    x3: 0 ,
-    y3: 100 ,
-    x2: -50 ,
-    y2: 50 ,
-    x1: 0 ,
-    y1: 0
+    x1: -100 , 
+    y1: -100 ,
+    x2: 0 ,
+    y2: -200 ,
+    x3: 100 ,
+    y3: -100 ,
+    x4: 0 ,
+    y4: 0
 };
 
 
 let type3 = {
-    x1: 50, 
+    x1: 50 , 
     y1: 50 ,
     x2: 0 ,
     y2: 100 ,
@@ -43,16 +43,7 @@ let type3 = {
 };
 
 
-let type4 = {
-     x4: 100 , 
-    y4: 100 ,
-    x3: 0 ,
-    y3: 200 ,
-    x2: -200 ,
-    y2: 100 ,
-    x1: 0 ,
-    y1: 0
-};
+
 
 
 let small ={
@@ -106,7 +97,7 @@ class BubbleMenu extends Component {
       <div>
      <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="hello1" type={type1} size={small} />
       <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="hello2"  type={type2}  size={large}/>
-       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "hello3" type={type4}  size={medium} />
+       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "hello3" type={type3}  size={medium} />
       </div>
     );
   }

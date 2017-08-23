@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+.logo{
+	width: auto;
+	height: 60px;
+	padding-left: 5%;
+	padding-top: 5%;
+	opacity: 0.6;
+	transition: opacity 1s;
 
+}
+
+
+.logo:hover{
+	opacity: 1;
+	transition: opacity 1s;
+}
 body {
   margin: 0;
   padding: 0;
@@ -70,12 +84,21 @@ height:100%;
 
 @media only screen and (max-width: 600px) {
 
+	body{
+		background-color:white;
+		transition: background-color 3s;
+	}
 	.container{
 		  margin: 0px;
-     
+     position: relative;
       box-shadow: none;
       transition: box-shadow 2s  ,margin 2s;
 
+	}
+
+	.content{
+
+		  padding-top: 20%;
 	}
 
 	.content h1{

@@ -6,7 +6,8 @@ class Navbar extends Component {
   render() {
     return (
       <nav>
-       #write2smile
+       <img src = "logo.png"  className="logo" />
+       
       </nav>
     );
   }
