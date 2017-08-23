@@ -5,8 +5,8 @@ import bubble3 from './svg/bubble3.svg';
 import bubble4 from './svg/bubble4.svg';
 import Bubble from './Bubble';
 //import './Bubbles.css';
-import {TweenMax, Power2, TimelineLite, Linear} from "gsap";
-
+import {TweenMax, Power2, TimelineLite, Elastic, TweenLite,Linear} from "gsap";
+var bubbleId = ["bubble0", "bubble1", "bubble2"] ; 
 
 let type1 = {
     x1: 100 , 
@@ -70,6 +70,24 @@ let large ={
 
 class BubbleMenu extends Component {
 
+  burst(id , bubbleId ) {
+ 
+  for(var i = 0 ; i < bubbleId.length ; i++){
+
+      if( bubbleId[i] == id ){
+      TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(0.9, 0.9) ,scale:0, rotation:0, fillOpacity: 0});
+  
+      }
+      else{
+         TweenMax.to('#'+ bubbleId[i], 12, { y:-1000, fillOpacity: 0 });
+
+
+      }
+
+
+  } 
+   }
+
   componentDidMount() {
   window.onload = function(){
   //dont delete the below comments they have some good paths which can be used later 
@@ -85,10 +103,10 @@ class BubbleMenu extends Component {
 
   render() {
     return (
-      <div className="BubbleMenu">
-     <Bubble myID="bubble1" bubbleText ="Hello 1" type={type1} size={small} />
-      <Bubble myID="bubble2" bubbleText ="Hello 2"  type={type2}  size={large}/>
-       <Bubble myID="bubble3" bubbleText ="Hello 3" type={type4}  size={medium} />
+      <div>
+     <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="hello1" type={type1} size={small} />
+      <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="hello2"  type={type2}  size={large}/>
+       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "hello3" type={type4}  size={medium} />
       </div>
     );
   }
