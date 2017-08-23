@@ -10,16 +10,13 @@ class Bubble extends Component {
 
 
   componentDidMount() {
-  window.onload = function(){
-  console.log(this.props.myID);
-  TweenMax.to('svg#'+ this.props.myID, 20, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
+
+  //console.log(this.props.myID);
+  TweenMax.to('#'+ this.props.myID, 20, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
 
   //var myText = this.refs.bubbletext;
   //myText.text = this.props.bubbletext ; 
-  }
-
-
-
+  
 }
 
   render() {

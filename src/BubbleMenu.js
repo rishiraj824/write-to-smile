@@ -14,6 +14,7 @@ class BubbleMenu extends Component {
 
   componentDidMount() {
   window.onload = function(){
+  //dont delete the below comments they have some good paths which can be used later 
   //TweenMax.to("#bubble1", 20, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
   //TweenMax.to("#bubble2", 10, {bezier:[{x:50, y:50}, {x:0, y:100}, {x:-50, y:50}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
   //TweenMax.to("#bubble3", 15, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100},{x:0, y:0} ], ease:Linear.easeNone ,repeat:-1} );
@@ -27,7 +28,9 @@ class BubbleMenu extends Component {
   render() {
     return (
       <div className="BubbleMenu">
-     <Bubble myID="bubble1q" bubbleText ="Hello 1"  />
+     <Bubble myID="bubble1" bubbleText ="Hello 1"  />
+      <Bubble myID="bubble2" bubbleText ="Hello 2"  />
+       <Bubble myID="bubble3" bubbleText ="Hello 3"  />
       </div>
     );
   }

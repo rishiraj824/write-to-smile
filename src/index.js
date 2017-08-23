@@ -7,5 +7,5 @@ import Bubble from './Bubble';
 import BubbleMenu from './BubbleMenu';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<BubbleMenu />, document.getElementById('root'));
+ReactDOM.render(<BubbleMenu /> , document.getElementById('root'));
 registerServiceWorker();
