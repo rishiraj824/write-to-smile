@@ -11,8 +11,10 @@ class Bubble extends Component {
 
   componentDidMount() {
 
-  //console.log(this.props.myID);
-  TweenMax.to('#'+ this.props.myID, 20, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
+   let type = this.props.type ; 
+
+  console.log(type.x1);
+  TweenMax.to('#'+ this.props.myID, 20, {bezier:[{x:type.x1, y:type.y1}, {x:type.x2, y:type.y2}, {x:type.x3, y:type.y3}, {x:type.x4, y:type.y4}], ease:Linear.easeNone ,repeat:-1} );
 
   //var myText = this.refs.bubbletext;
   //myText.text = this.props.bubbletext ; 
@@ -22,7 +24,7 @@ class Bubble extends Component {
   render() {
     return (
    
-<svg  id = {this.props.myID} width="209" height="209" viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
+<svg  id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient cy="35.16%" fx="50%" fy="35.16%" r="59.77%" gradientTransform="matrix(0 1 -.99958 0 .85 -.148)" id="a">
       <stop stopColor="#2D2DE4" offset="0%"/>
