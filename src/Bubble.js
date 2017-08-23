@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import './Bubbles.css';
-import {TweenMax, Power2, TimelineLite, Linear, TweenLite} from "gsap";
+import {TweenMax, Power2, TimelineLite, Linear, Elastic, TweenLite} from "gsap";
 
 
 
@@ -10,7 +10,7 @@ class Bubble extends Component {
 burst(id) {
    //TweenLite.to('#'+id, 0.4, { scale:3, rotation:12, fillOpacity: 0});
    //TweenLite.to('#'+id, 10, { scale:1.2, rotation:12, fillOpacity: 0});
-   TweenLite.to('#'+id, 0.4, { scale:0, rotation:12, fillOpacity: 0});
+   TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(1, 0.9) ,scale:0, rotation:12, fillOpacity: 0});
   }
 
   componentDidMount() {
