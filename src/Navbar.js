@@ -6,7 +6,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav>
-       Hello ! I am navar.
+       #write2smile
       </nav>
     );
   }
