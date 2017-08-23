@@ -6,19 +6,31 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #f9f9f9;
 }
 
 
 .container{
 display: grid;
+position: fixed;
+bottom:0;
+top:0;
 grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto; 
+  grid-template-rows: 100px auto ; 
   grid-template-areas: 
       " n n"
       " c b"
       ;
 
+     margin: 50px;
+     background-color: white;
+      box-shadow: 2px 2px 20px 10px #efefef;
+
+     
+
 }
+
+
 
 .bubblemenu{
 grid-area: b;
@@ -35,8 +47,9 @@ height: 100px;
 .content{
 grid-area: c;
 //background-color: yellow;
-padding: 10%;
-padding-top: 25%
+padding-left: 10%;
+padding-top: 15%;
+height:100%;
 }
 
 .content h1{
@@ -57,6 +70,14 @@ padding-top: 25%
 
 
 @media only screen and (max-width: 600px) {
+
+	.container{
+		  margin: 0px;
+     
+      box-shadow: none;
+      transition: box-shadow 2s  ,margin 2s;
+
+	}
 
 	.content h1{
 		font-size: 40px;
