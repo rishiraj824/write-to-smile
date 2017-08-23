@@ -56,16 +56,16 @@ let type4 = {
 
 
 let small ={
-  length: "10% "
+  length: "20%"
 
 }
 
 let medium ={
-  length: "15%",
+  length: "30%",
 }
 
 let large ={
-  length: "20%", 
+  length: "40%", 
 }
 
 class BubbleMenu extends Component {

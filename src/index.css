@@ -1,5 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+
+.container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto; 
+  grid-template-areas: 
+      " n n"
+      " c b"
+      ;
+
+}
+
+.bubblemenu{
+grid-area: b;
+//background-color: red;
+
+}
+
+.navbar{
+grid-area: n;
+//background-color: blue;
+height: 100px;
+}
+
+.content{
+grid-area: c;
+//background-color: yellow;
+padding: 10%;
+padding-top: 25%
+}
+
+.content h1{
+	font-family: 'Baloo Bhaijaan', cursive;
+	font-size: 50px;
+	margin-bottom: 10px;
+	color: #4A4A4A ;
+}
+
+.content h3{
+	font-family: 'Baloo Bhaijaan', cursive;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+	margin-top: 0px;
+	color: #909090;
+
 }
