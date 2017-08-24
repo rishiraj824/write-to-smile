@@ -66,9 +66,9 @@ let type5 = {
     x1: 70 , 
     y1: 70 ,
     x2: 0 ,
-    y2: 140 ,
-    x3: -70 ,
-    y3: 70 ,
+    y2: 50 ,
+    x3: -50 ,
+    y3: 50 ,
     x4: 0 ,
     y4: 0,
     s: 12
@@ -131,6 +131,23 @@ bubble3.addEventListener("dragend", move("#bubble3" , type3) );
 bubble4.addEventListener("dragend", move("#bubble4" , type4));
 bubble0.addEventListener("dragend", move("#bubble0" , type5));
 
+
+
+bubble1.addEventListener("drag", grow("#bubble1" ) );
+bubble2.addEventListener("drag", grow("#bubble2" ) );
+bubble3.addEventListener("drag", grow("#bubble3" ) );
+bubble4.addEventListener("drag", grow("#bubble4" ) );
+bubble0.addEventListener("drag", grow("#bubble0" ) );
+
+
+function grow(id){
+  return function(){
+  
+     TweenMax.to(id, 4, {scale:1.5} );
+  }
+}
+
+
 function move(id, typex){
   return function(){
   console.log("xfg");
@@ -151,7 +168,7 @@ function move(id, typex){
       <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="Education"  type={type2}  size={large}/>
        <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "Sexual" bubbleText2 = "Orientation" type={type3}  size={large} />
       <Bubble onClick={()=>this.burst(bubbleId[3] , bubbleId)} myID={bubbleId[3]} bubbleText ="Mental" bubbleText2 = "Wellness" type={type4} size={medium} />
-    <Bubble onClick={()=>this.burst(bubbleId[4], bubbleId)}  myID={bubbleId[4]} bubbleText ="Relationships"  type={type5}  size={small}/>
+    <Bubble onClick={()=>this.burst(bubbleId[4], bubbleId)}  myID={bubbleId[4]} bubbleText ="Relationships"  type={type5}  size={medium}/>
       
       </div>
     );

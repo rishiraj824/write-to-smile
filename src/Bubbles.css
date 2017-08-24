@@ -6,23 +6,27 @@
     #bubble0{
    width: 30%;
    transition: width 2s;
+   opacity: 0.9;
 
   }
 
   #bubble1{
     width: 40%;
       transition: width 2s;
+       opacity: 0.9;
 
   }
 
   #bubble2{
    width: 30%;
      transition: width 2s;
+      opacity: 0.9;
   }
 
     #bubble3{
     width: 40%;
       transition: width 2s;
+       opacity: 0.9;
   }
 
 
@@ -30,6 +34,7 @@
   #bubble4{
    width: 30%;
      transition: width 2s;
+      opacity: 0.9;
   }
 
 
