@@ -1,44 +1,36 @@
   
+@media only screen and (max-width: 600px){
+
+
+    #bubble0{
+   width: 30%;
+   transition: width 2s;
+
+  }
+
   #bubble1{
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    width: 20%;
-    height: 20%;
-    min-height: 200px;
-    min-width: 200px;
+    width: 40%;
+      transition: width 2s;
 
   }
 
   #bubble2{
-    position: relative;
-    top: 30%;
-    left: 30%;
-    width: 20%;
-    height: 20%;
-    min-height: 200px;
-    min-width: 200px;
+   width: 30%;
+     transition: width 2s;
   }
 
     #bubble3{
-    position: relative;
-    top: 10%;
-    left: 5%;
-    width: 8%;
-    height: 8%;
-    min-height: 200px;
-    min-width: 200px;
+    width: 40%;
+      transition: width 2s;
   }
 
 
 
   #bubble4{
-    position: relative;
-    top: 70%;
-    width: 10%;
-    height: 20%;
-    min-height: 200px;
-    min-width: 200px;
+   width: 30%;
+     transition: width 2s;
   }
 
+
+}
 

@@ -13,7 +13,7 @@ class Bubble extends Component {
    let type = this.props.type ; 
 
   console.log(type.x1);
-  TweenMax.to('#'+ this.props.myID, 20, {bezier:[{x:type.x1, y:type.y1}, {x:type.x2, y:type.y2}, {x:type.x3, y:type.y3}, {x:type.x4, y:type.y4}], ease:Linear.easeNone ,repeat:-1} );
+  TweenMax.to('#'+ this.props.myID, type.s, {bezier:[{x:type.x1, y:type.y1}, {x:type.x2, y:type.y2}, {x:type.x3, y:type.y3}, {x:type.x4, y:type.y4}], ease:Linear.easeNone ,repeat:-1} );
 
   //var myText = this.refs.bubbletext;
   //myText.text = this.props.bubbletext ; 

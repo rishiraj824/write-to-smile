@@ -4,9 +4,9 @@ import bubble2 from './svg/bubble2.svg';
 import bubble3 from './svg/bubble3.svg';
 import bubble4 from './svg/bubble4.svg';
 import Bubble from './Bubble';
-//import './Bubbles.css';
+import './Bubbles.css';
 import {TweenMax, Power2, TimelineLite, Elastic, TweenLite,Linear} from "gsap";
-var bubbleId = ["bubble0", "bubble1", "bubble2"] ; 
+var bubbleId = ["bubble0", "bubble1", "bubble2", "bubble3", "bubble4"] ; 
 
 let type1 = {
     x1: 100 , 
@@ -16,7 +16,8 @@ let type1 = {
     x3: -100 ,
     y3: 100 ,
     x4: 0 ,
-    y4: 0
+    y4: 0,
+    s:15 
 };
 
 let type2 = {
@@ -27,7 +28,8 @@ let type2 = {
     x3: 100 ,
     y3: -100 ,
     x4: 0 ,
-    y4: 0
+    y4: 0 ,
+    s: 10
 };
 
 
@@ -39,9 +41,35 @@ let type3 = {
     x3: -50 ,
     y3: 50 ,
     x4: 0 ,
-    y4: 0
+    y4: 0,
+    s: 8
 };
 
+
+let type4 = {
+    x1: 50 , 
+    y1: 50 ,
+    x2: 100 ,
+    y2: 0 ,
+    x3: 50 ,
+    y3: -50 ,
+    x4: 0 ,
+    y4: 0,
+    s : 10
+};
+
+
+let type5 = {
+    x1: 70 , 
+    y1: 70 ,
+    x2: 0 ,
+    y2: 140 ,
+    x3: -70 ,
+    y3: 70 ,
+    x4: 0 ,
+    y4: 0,
+    s: 12
+};
 
 
 
@@ -52,11 +80,11 @@ let small ={
 }
 
 let medium ={
-  length: "30%",
+  length: "28%",
 }
 
 let large ={
-  length: "40%", 
+  length: "35%", 
 }
 
 class BubbleMenu extends Component {
@@ -70,7 +98,7 @@ class BubbleMenu extends Component {
   
       }
       else{
-         TweenMax.to('#'+ bubbleId[i], 12, { y:-1000, fillOpacity: 0 });
+         TweenMax.to('#'+ bubbleId[i], 10, { y:-1000, fillOpacity: 0 });
 
 
       }
@@ -95,9 +123,12 @@ class BubbleMenu extends Component {
   render() {
     return (
       <div>
-     <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="hello1" type={type1} size={small} />
-      <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="hello2"  type={type2}  size={large}/>
-       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "hello3" type={type3}  size={medium} />
+     <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="Legal" type={type1} size={small} />
+      <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="Education"  type={type2}  size={large}/>
+       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "Sexual Orientation" type={type3}  size={large} />
+      <Bubble onClick={()=>this.burst(bubbleId[3] , bubbleId)} myID={bubbleId[3]} bubbleText ="Mental Wellness" type={type4} size={medium} />
+    <Bubble onClick={()=>this.burst(bubbleId[4], bubbleId)}  myID={bubbleId[4]} bubbleText ="Relationships"  type={type5}  size={small}/>
+      
       </div>
     );
   }
