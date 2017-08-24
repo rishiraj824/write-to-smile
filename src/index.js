@@ -10,7 +10,7 @@ import BubbleMenu from './BubbleMenu';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-	<div className="container"> 
+	<div className="container" id="container" > 
 		<div className="navbar" >
 			<Navbar/ >
 		</div> 

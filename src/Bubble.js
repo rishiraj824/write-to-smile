@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import './Bubbles.css';
+import './Bubbles.css';
 import {TweenMax, Power2, TimelineLite, Linear, Elastic, TweenLite} from "gsap";
 
 
@@ -45,8 +45,10 @@ class Bubble extends Component {
     <ellipse  fill="url(#a)" cx="104.5" cy="104.54" rx="104.5" ry="104.46"/>
     <path d="M105.8 45.6c13.86 0 58.5 8.6 58.5-9.1S138.13 4.44 105.8 4.44c-32.3 0-58.48 14.35-58.48 32.06 0 17.7 44.65 9.1 58.5 9.1z" fillOpacity=".9" fill="url(#b)"/>
     <path d="M30.67 35.75c-5.92 7.22-68.36 95.8 27.6 156.2C123.2 232.8 235.07 167 196.3 66.58c15.1 56.43-23.67 135.84-109.1 114.84-113.05-36.1-56.53-143.72-56.53-145.7z" fillOpacity=".31" fill="url(#c)" style={{mixBlendMode:"lighten"}}/>
-    <text fontFamily="Roboto-Light, Roboto" fontSize="24" fontWeight="300" letterSpacing="3" fill="#FFF">
+    <text fontFamily="Varela Round Regular, Varela Round" fontSize="22" fontWeight="300" letterSpacing="3" fill="#FFF">
       <tspan textAnchor="middle"   x="50%" y="50%" dominantBaseline="middle">{this.props.bubbleText}</tspan>
+      <tspan textAnchor="middle"   x="50%" y="62%" dominantBaseline="middle">{this.props.bubbleText2}</tspan>
+  
     </text>
   </g>
 </svg>
