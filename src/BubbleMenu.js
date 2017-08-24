@@ -135,7 +135,7 @@ function move(id, typex){
   return function(){
   console.log("xfg");
     var type = typex;
-     TweenMax.to(id, type.s, {bezier:[{x:type.x1, y:type.y1}, {x:type.x2, y:type.y2}, {x:type.x3, y:type.y3}, {x:type.x4, y:type.y4}], ease:Linear.easeNone ,repeat:-1} );
+     TweenMax.to(id, type.s, {yoyo: true ,bezier:[{x:type.x1, y:type.y1}, {x:type.x2, y:type.y2}, {x:type.x3, y:type.y3}, {x:type.x4, y:type.y4}], ease:Linear.easeNone ,repeat:-1} );
   }
 }
 
