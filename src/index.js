@@ -3,7 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Bubble from './Bubble';
+import Content from './Content';
+import Navbar from './Navbar';
+
+import BubbleMenu from './BubbleMenu';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Bubble bubbleText ="My text"/>, document.getElementById('root'));
+ReactDOM.render(
+	<div className="container" id="container" > 
+		<div className="navbar" >
+			<Navbar/ >
+		</div> 
+
+		<div className="content" >
+			<Content/> 
+		</div>
+		
+		<div className="bubblemenu" >
+			<BubbleMenu/> 
+		</div>
+	</div> 
+
+	, document.getElementById('root'));
 registerServiceWorker();

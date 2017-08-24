@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import {TweenMax, Power2, TimelineLite, Linear} from "gsap";
+
 class App extends Component {
   render() {
     return (
