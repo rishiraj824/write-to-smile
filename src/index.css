@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+
+
+#aboutLink{
+	float: right;
+	font-family: 'Varela Round';
+	font-size: 18px;
+	color: #909090 ;
+	padding-right: 5%;
+	padding-top: 5%;
+	transition: all 0.5s;
+}
+
+#aboutLink:hover{
+    color: #6CCECB ;
+}
+
 .logo{
 	width: auto;
 	height: 60px;

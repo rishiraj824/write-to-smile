@@ -7,6 +7,9 @@ class Navbar extends Component {
     return (
       <nav>
        <img src = "logo.png"  className="logo" />
+       <span id="aboutLink" >
+       #write2smile
+       </span>
        
       </nav>
     );
