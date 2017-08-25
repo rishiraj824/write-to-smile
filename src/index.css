@@ -3,19 +3,37 @@
 
 
 
-#aboutLink{
+.corner{
 	float: right;
-	font-family: 'Varela Round';
+	width: 10px;
+	height: 10px;
+	transition: all 1s;
+	border-bottom-left-radius: 180px;
+}
+.aboutLink{
+	position: fixed;
+	top:15%;
+	right: 5%;
+ 	color: #909090 ;
+ 	transition: 1s;
+ 	font-family: 'Varela Round';
 	font-size: 18px;
-	color: #909090 ;
-	padding-right: 5%;
-	padding-top: 5%;
-	transition: all 0.5s;
 }
 
-#aboutLink:hover{
-    color: #6CCECB ;
-}
+.aboutLink:hover + .corner{ 
+	width: 180px;
+	height: 180px;
+    color: white ;
+    background-color: #6CCECB; 
+     }
+
+ .aboutLink:hover{
+ 	color: white ;
+ 	transition: 1s;
+
+ }    
+
+
 
 .logo{
 	width: auto;
@@ -99,6 +117,10 @@ height:100%;
 
 
 @media only screen and (max-width: 600px) {
+
+	.aboutLink{
+		top:5%;
+	}
 
 	body{
 		background-color:white;

@@ -7,11 +7,12 @@ class Navbar extends Component {
     return (
       <nav>
        <img src = "logo.png"  className="logo" />
-       <span id="aboutLink" >
-       #write2smile
-       </span>
+      
+        <div className="aboutLink"> #write2smile </div>
+        <div className="corner" />
+       </nav>
+      
        
-      </nav>
     );
   }
 }
