@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './index.css';
+
 
 
 class Navbar extends Component {
-  render() {
+ 
+  
+  render(props) {
     return (
       <nav>
-       <img src = "logo.png"  className="logo" />
-      
-        <div className="aboutLink"> #write2smile </div>
+       <img src = "logo.png"  className="logo" alt="write2smile" />
+        <div className="aboutLink" onClick ={this.props.showAbout}  > #write2smile </div>
         <div className="corner" />
        </nav>
       
