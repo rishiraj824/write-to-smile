@@ -53,8 +53,9 @@ class App extends Component {
     </div> 
 
     <div className="content" >
-      <h1>About us</h1> 
-      <h3>Lorem ipsum</h3>
+      <h1>write2smile</h1> 
+      <h3>Write2Smile exists to fight depression and stand by those who feel vulnerable. Introducing the concept of anonymous interactions & lay counseling, we aim to redefine the awareness regarding mental health wellness. Yes, we are listening, talk with us anytime, from anywhere and let the best answers reach you through experts.</h3>
+      <h3>Feel free to contact us at hello@write2smile.org </h3>
     </div>
     <div className="bubblemenu" >
       <BubbleMenu/> 
