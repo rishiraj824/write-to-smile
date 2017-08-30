@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Bubbles.css';
-import {TweenMax, Power2, TimelineLite, Linear, Elastic, TweenLite} from "gsap";
+import {TweenMax,  Linear} from "gsap";
 
 
 

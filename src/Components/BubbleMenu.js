@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import bubble1 from './svg/bubble1.svg';
-import bubble2 from './svg/bubble2.svg';
-import bubble3 from './svg/bubble3.svg';
-import bubble4 from './svg/bubble4.svg';
 import Bubble from './Bubble';
 import './Bubbles.css';
-import {TweenMax, Power2, TimelineLite, Elastic, TweenLite,Linear} from "gsap";
+import {TweenMax, Elastic, TweenLite,Linear} from "gsap";
 import Draggable from "gsap/Draggable";
 
 
@@ -92,11 +88,12 @@ let large ={
 
 class BubbleMenu extends Component {
 
+
   burst(id , bubbleId ) {
  
   for(var i = 0 ; i < bubbleId.length ; i++){
 
-      if( bubbleId[i] == id ){
+      if( bubbleId[i] === id ){
       TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(0.9, 0.9) ,scale:0, rotation:0, fillOpacity: 0});
   
       }
