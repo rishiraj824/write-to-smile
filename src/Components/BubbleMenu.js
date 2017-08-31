@@ -7,6 +7,35 @@ import Draggable from "gsap/Draggable";
 
 var bubbleId = ["bubble0", "bubble1", "bubble2", "bubble3", "bubble4"] ; 
 
+
+
+var pink ={
+startColor : "#FFE8C2" , 
+endColor: "#FF6B9E"
+};
+
+
+var greenblue ={
+startColor : "#4CFF61" , 
+endColor: "#369FEE"
+};
+
+
+var purplemagenta ={
+startColor : "#2D2DE4" , 
+endColor: "#FF67C1"
+};
+
+var orange ={
+startColor : "#FFFB65" , 
+endColor: "#FF2A2A"
+};
+
+var green ={
+startColor : "#10DC0F" , 
+endColor: "#CFFF5C"
+};
+
 let type1 = {
     x1: 100 , 
     y1: 100 ,
@@ -161,11 +190,11 @@ function move(id, typex){
   render() {
     return (
       <div>
-     <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="Legal" type={type1} size={small} />
-      <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="Education"  type={type2}  size={large}/>
-       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "Sexual" bubbleText2 = "Orientation" type={type3}  size={large} />
-      <Bubble onClick={()=>this.burst(bubbleId[3] , bubbleId)} myID={bubbleId[3]} bubbleText ="Mental" bubbleText2 = "Wellness" type={type4} size={medium} />
-    <Bubble onClick={()=>this.burst(bubbleId[4], bubbleId)}  myID={bubbleId[4]} bubbleText ="Relationships"  type={type5}  size={medium}/>
+     <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="Legal" type={type1} size={small} shade={green} />
+      <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="Career"  bubbleText2 = "Counselling" type={type2}  size={large} shade={purplemagenta}/>
+       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "Sexual" bubbleText2 = "Orientation" type={type3}  size={large}  shade={pink}/>
+      <Bubble onClick={()=>this.burst(bubbleId[3] , bubbleId)} myID={bubbleId[3]} bubbleText ="Mental" bubbleText2 = "Wellness" type={type4} size={medium} shade={orange} />
+    <Bubble onClick={()=>this.burst(bubbleId[4], bubbleId)}  myID={bubbleId[4]} bubbleText ="Relationships"  type={type5}  size={medium} shade={greenblue}/>
       
       </div>
     );
