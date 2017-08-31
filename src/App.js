@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './index.css';
 import Content from './Components/Content';
 import Navbar from './Components/Navbar';
+import FormComponent from './Components/FormComponent'
 
 import BubbleMenu from './Components/BubbleMenu';
 
@@ -32,11 +33,12 @@ class App extends Component {
       return (
     <div className="container" id="container" > 
     <div className="navbar" >
-      <Navbar showAbout={this.showAbout} / >
+      <Navbar showAbout={this.showAbout} />
     </div> 
 
     <div className="content" >
-      <Content/> 
+      {/*<Content/> */}
+      <FormComponent/>
     </div>
     
     <div className="bubblemenu" >
