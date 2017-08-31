@@ -121,7 +121,7 @@ class BubbleMenu extends Component {
   burst(id , bubbleId ) {
  
   for(var i = 0 ; i < bubbleId.length ; i++){
-    this.props.showForm() ;
+    this.props.showForm(bubbleId) ;
 
       if( bubbleId[i] === id ){
       TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(0.9, 0.9) ,scale:0, rotation:0, fillOpacity: 0});

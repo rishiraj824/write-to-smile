@@ -17,13 +17,14 @@ class App extends Component {
    
   constructor(props){
     super(props);
-    this.state = {screen: 1 };
+    this.state = {screen: 1 , category : -1};
     this.showAbout = this.showAbout.bind(this);
     this.showForm = this.showForm.bind(this);
   }
 
-  showForm(){
+  showForm(category){
     this.setState({screen: 3});
+    this.setState({category: category});
   }
 
    showAbout(){
