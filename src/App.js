@@ -19,6 +19,11 @@ class App extends Component {
     super(props);
     this.state = {screen: 1 };
     this.showAbout = this.showAbout.bind(this);
+    this.showForm = this.showForm.bind(this);
+  }
+
+  showForm(){
+    this.setState({screen: 3});
   }
 
    showAbout(){
@@ -38,16 +43,17 @@ class App extends Component {
 
     <div className="content" >
       {/*<Content/> */}
-      <FormComponent/>
+      <h1>Drag and Pop.</h1>
+      <h3>It feels good</h3>
     </div>
     
     <div className="bubblemenu" >
-      <BubbleMenu/> 
+      <BubbleMenu showForm ={this.showForm}/> 
     </div>
     </div> 
     );
 
-    }else{
+    }else if(screen===2){
       return (
     <div className="container" id="container" > 
     <div className="navbar" >
@@ -59,11 +65,31 @@ class App extends Component {
       <h3>Write2Smile exists to fight depression and stand by those who feel vulnerable. Introducing the concept of anonymous interactions & lay counseling, we aim to redefine the awareness regarding mental health wellness. Yes, we are listening, talk with us anytime, from anywhere and let the best answers reach you through experts.</h3>
       <h3>Feel free to contact us at hello@write2smile.org </h3>
     </div>
-    <div className="bubblemenu" >
-      <BubbleMenu/> 
+    <div className="bubblemenu"  >
+      <BubbleMenu showForm ={this.showForm} /> 
     </div>
     </div> 
     );
+    }
+    else if(screen===3){
+      return (
+    <div className="container" id="container" > 
+    <div className="navbar" >
+      <Navbar showAbout={this.showAbout} />
+    </div> 
+
+    <div className="content" >
+      {/*<Content/> */}
+      <FormComponent/>
+    </div>
+
+     <div className="bubblemenu" >
+      <BubbleMenu showForm ={this.showForm}/> 
+    </div>
+    
+    </div> 
+    );
+
     }
     
   }

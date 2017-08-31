@@ -121,10 +121,11 @@ class BubbleMenu extends Component {
   burst(id , bubbleId ) {
  
   for(var i = 0 ; i < bubbleId.length ; i++){
+    this.props.showForm() ;
 
       if( bubbleId[i] === id ){
       TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(0.9, 0.9) ,scale:0, rotation:0, fillOpacity: 0});
-  
+      
       }
       else{
          TweenMax.to('#'+ bubbleId[i], 10, { y:-1000, fillOpacity: 0 });
@@ -138,11 +139,6 @@ class BubbleMenu extends Component {
 
   componentDidMount() {
   window.onload = function(){
-  //dont delete the below comments they have some good paths which can be used later 
-  //TweenMax.to("#bubble1", 20, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
-  //TweenMax.to("#bubble2", 10, {bezier:[{x:50, y:50}, {x:0, y:100}, {x:-50, y:50}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
-  //TweenMax.to("#bubble3", 15, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100},{x:0, y:0} ], ease:Linear.easeNone ,repeat:-1} );
-  //TweenMax.to("#bubble4", 22, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100}, {x:0, y:0}], ease:Linear.easeNone ,repeat:-1} );
 
 
 var bubble1 = Draggable.create("#bubble1" )[0] ;
@@ -176,7 +172,6 @@ function grow(id){
 
 function move(id, typex){
   return function(){
-  console.log("xfg");
     var type = typex;
      TweenMax.to(id, type.s, {yoyo: true ,bezier:[{x:type.x1, y:type.y1}, {x:type.x2, y:type.y2}, {x:type.x3, y:type.y3}, {x:type.x4, y:type.y4}], ease:Linear.easeNone ,repeat:-1} );
   }
