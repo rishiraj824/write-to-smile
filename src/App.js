@@ -20,6 +20,7 @@ class App extends Component {
     this.state = {screen: 1 , category : -1};
     this.showAbout = this.showAbout.bind(this);
     this.showForm = this.showForm.bind(this);
+    this.showHome= this.showHome.bind(this);
   }
 
   showForm(category){
@@ -29,6 +30,10 @@ class App extends Component {
 
    showAbout(){
     this.setState({screen: 2});
+  }
+
+    showHome(){
+    this.setState({screen: 1});
   }
 
   render() {
@@ -65,8 +70,10 @@ class App extends Component {
       <h1>write2smile</h1> 
       <h3>Write2Smile exists to fight depression and stand by those who feel vulnerable. Introducing the concept of anonymous interactions & lay counseling, we aim to redefine the awareness regarding mental health wellness. Yes, we are listening, talk with us anytime, from anywhere and let the best answers reach you through experts.</h3>
       <h3>Feel free to contact us at hello@write2smile.org </h3>
+
+      <button onClick={this.showHome} className= "outlineButton"> Go Back </button>
     </div>
-    <div className="bubblemenu"  >
+    <div className="bubblemenu">
       <BubbleMenu showForm ={this.showForm} /> 
     </div>
     </div> 
