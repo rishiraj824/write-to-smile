@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
-
+*{
+	font-family: 'Varela Round';
+	color: #4A4A4A ;
+}
 
 .corner{
 	float: right;
@@ -107,8 +110,9 @@ height:100%;
      border: 2px solid #6CCECB; 
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
+    min-height: 55px !important;
     color: #6CCECB;
-    padding: 15px 60px;
+    padding: 10px 60px !important;
     text-align: center;
     text-decoration: none;
     display: inline-block;
