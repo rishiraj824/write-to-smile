@@ -4,8 +4,9 @@ import './index.css';
 import Content from './Components/Content';
 import Navbar from './Components/Navbar';
 import FormComponent from './Components/FormComponent'
-
 import BubbleMenu from './Components/BubbleMenu';
+import Animate from 'react-simple-animate';
+
 
 
  
@@ -46,11 +47,11 @@ class App extends Component {
     <div className="navbar" >
       <Navbar showAbout={this.showAbout} />
     </div> 
-
+    
     <div className="content" >
       {/*<Content/> */}
       <h1>Drag and Pop.</h1>
-      <h3>It feels good</h3>
+      <h3>Choose the bubble which is bothering you right now.<br/>Trust us, we can help.</h3>
     </div>
     
     <div className="bubblemenu" >

@@ -3,9 +3,10 @@ import Bubble from './Bubble';
 import './Bubbles.css';
 import {TweenMax, Elastic, TweenLite,Linear} from "gsap";
 import Draggable from "gsap/Draggable";
+import Animate from 'react-simple-animate';
 
 
-var bubbleId = ["bubble0", "bubble1", "bubble2", "bubble3", "bubble4"] ; 
+var bubbleId = ["bubble0", "bubble1", "bubble2", "bubble3", "bubble4" ] ; 
 
 
 
@@ -184,6 +185,16 @@ function move(id, typex){
 
   render() {
     return (
+      <Animate durationSeconds={0.2}
+         startAnimation
+         delaySeconds={0.5}
+         startStyle={{
+           opacity: 0,
+         }}
+         endStyle={{
+           opacity: 1,
+         }}
+       >
       <div>
      <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="Legal" type={type1} size={small} shade={green} />
       <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="Career"  bubbleText2 = "Counselling" type={type2}  size={large} shade={purplemagenta}/>
@@ -192,6 +203,7 @@ function move(id, typex){
     <Bubble onClick={()=>this.burst(bubbleId[4], bubbleId)}  myID={bubbleId[4]} bubbleText ="Relationships"  type={type5}  size={medium} shade={greenblue}/>
       
       </div>
+      </Animate>
     );
   }
 }

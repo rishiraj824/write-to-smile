@@ -7,7 +7,8 @@
     "muicss": "^0.9.24",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-simple-animate": "^1.6.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.11"
