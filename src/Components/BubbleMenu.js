@@ -6,36 +6,9 @@ import Draggable from "gsap/Draggable";
 import Animate from 'react-simple-animate';
 
 
-var bubbleId = ["bubble0", "bubble1", "bubble2", "bubble3", "bubble4" ] ; 
 
 
 
-var pink ={
-startColor : "#FFE8C2" , 
-endColor: "#FF6B9E"
-};
-
-
-var greenblue ={
-startColor : "#4CFF61" , 
-endColor: "#369FEE"
-};
-
-
-var purplemagenta ={
-startColor : "#2D2DE4" , 
-endColor: "#FF67C1"
-};
-
-var orange ={
-startColor : "#FFFB65" , 
-endColor: "#FF2A2A"
-};
-
-var green ={
-startColor : "#10DC0F" , 
-endColor: "#CFFF5C"
-};
 
 let type1 = {
     x1: 100 , 
@@ -115,6 +88,15 @@ let medium ={
 let large ={
   length: "35%", 
 }
+
+
+var bubbleId = [ "bubble0", "bubble1",  "bubble2",  "bubble3",  "bubble4" ] ;
+var bubbles = [ { id : "bubble0" , shade : { startColor : "#10DC0F" , endColor: "#CFFF5C" } , type: type1 , size : small , bubbleText :"Legal"  }, 
+                { id : "bubble1" , shade : {startColor : "#2D2DE4" , endColor: "#FF67C1" }, type: type2 , size : large , bubbleText :"Career" , bubbleText2 :"Counselling"}, 
+                { id : "bubble2" , shade : {startColor : "#FFE8C2" , endColor: "#FF6B9E" }, type: type3 , size : large , bubbleText : "Sexual" ,bubbleText2 : "Orientation"}, 
+                { id : "bubble3" , shade : {startColor : "#FFFB65" , endColor: "#FF2A2A" }, type: type4 , size : medium, bubbleText :"Mental" ,bubbleText2 : "Wellness"}, 
+                { id : "bubble4" , shade : {startColor : "#4CFF61" , endColor: "#369FEE" }, type: type5 , size : medium, bubbleText :"Relationships" }] ;
+
 
 class BubbleMenu extends Component {
 
@@ -196,11 +178,11 @@ function move(id, typex){
          }}
        >
       <div>
-     <Bubble onClick={()=>this.burst(bubbleId[0] , bubbleId)} myID={bubbleId[0]} bubbleText ="Legal" type={type1} size={small} shade={green} />
-      <Bubble onClick={()=>this.burst(bubbleId[1], bubbleId)}  myID={bubbleId[1]} bubbleText ="Career"  bubbleText2 = "Counselling" type={type2}  size={large} shade={purplemagenta}/>
-       <Bubble  onClick={()=>this.burst(bubbleId[2], bubbleId)}  myID={bubbleId[2]} bubbleText = "Sexual" bubbleText2 = "Orientation" type={type3}  size={large}  shade={pink}/>
-      <Bubble onClick={()=>this.burst(bubbleId[3] , bubbleId)} myID={bubbleId[3]} bubbleText ="Mental" bubbleText2 = "Wellness" type={type4} size={medium} shade={orange} />
-    <Bubble onClick={()=>this.burst(bubbleId[4], bubbleId)}  myID={bubbleId[4]} bubbleText ="Relationships"  type={type5}  size={medium} shade={greenblue}/>
+     <Bubble onClick={()=>this.burst(bubbles[0].id , bubbleId)} myID={bubbles[0].id} bubbleText ={bubbles[0].bubbleText} type={bubbles[0].type} size={bubbles[0].size} shade={bubbles[0].shade} />
+      <Bubble onClick={()=>this.burst(bubbles[1].id, bubbleId)}  myID={bubbles[1].id} bubbleText ={bubbles[1].bubbleText}  bubbleText2 = {bubbles[1].bubbleText} type={bubbles[1].type} size={bubbles[1].size} shade={bubbles[1].shade}/>
+       <Bubble  onClick={()=>this.burst(bubbles[2].id, bubbleId)}  myID={bubbles[2].id} bubbleText = {bubbles[2].bubbleText} bubbleText2 = {bubbles[2].bubbleText}type={bubbles[2].type}  size={bubbles[2].size}  shade={bubbles[2].shade}/>
+      <Bubble onClick={()=>this.burst(bubbles[3].id , bubbleId)} myID={bubbles[3].id} bubbleText ={bubbles[3].bubbleText} bubbleText2 = {bubbles[3].bubbleText} type={bubbles[3].type} size={bubbles[3].size} shade={bubbles[3].shade} />
+    <Bubble onClick={()=>this.burst(bubbles[4].id ,bubbleId)}  myID={bubbles[4].id} bubbleText ={bubbles[4].bubbleText}  type={bubbles[4].type}  size={bubbles[4].size} shade={bubbles[4].shade}/>
       
       </div>
       </Animate>
