@@ -90,8 +90,7 @@ class App extends Component {
     </div>
     </div> 
     );
-    }
-    else if(screen===3){
+    }else if(screen===3){
       return (
     <div className="container" id="container" style={bgstyle}> 
     <div className="navbar" >
@@ -110,21 +109,23 @@ class App extends Component {
     </div> 
     );
 
-    }
-
-    else if(screen===4){
-
-      <div className="container" id="container" style={bgstyle} > 
+    }else if(screen===4){
+    return (
+    <div className="container" id="container" style={bgstyle} > 
     <div className="navbar" >
       <Navbar showAbout={this.showAbout} />
     </div> 
     
     <div className="content" >
       {/*<Content/> */}
-      <h1>Drag and Pop.</h1>
-      <h3>Choose the bubble which is bothering you right now.<br/>Trust us, we can help.</h3>
+      <h1>Be strong.</h1>
+      <h3>Definetely we'll help you out.</h3>
+    </div>
+  <div className="bubblemenu" style={{ opacity: 0}} >
+      <BubbleMenu showForm ={this.showForm}/> 
     </div>
     </div>
+    );
     }
     
   }
