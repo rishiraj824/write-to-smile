@@ -6,10 +6,6 @@ import Draggable from "gsap/Draggable";
 import Animate from 'react-simple-animate';
 
 
-
-
-
-
 let type1 = {
     x1: 100 , 
     y1: 100 ,
@@ -103,18 +99,22 @@ class BubbleMenu extends Component {
   burst(id , bubbles ) {
  
   for(var i = 0 ; i < bubbles.length ; i++){
-    this.props.showForm(id) ;
-
+ 
+      
       if( bubbles[i].id === id ){
       TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(0.9, 0.9) ,scale:0, rotation:0, fillOpacity: 0});
-      
+      var startColor = bubbles[i].shade.endColor ; 
       }
       else{
          TweenMax.to('#'+ bubbles[i].id, 10, { y:-1000, fillOpacity: 0 });
       }
 
+  
+
 
   } 
+    console.log(startColor);
+     this.props.showForm(id, startColor) ;
    }
 
   componentDidMount() {

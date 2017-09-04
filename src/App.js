@@ -18,15 +18,16 @@ class App extends Component {
    
   constructor(props){
     super(props);
-    this.state = {screen: 1 , category : -1};
+    this.state = {screen: 1 , category : -1, bgcolor: "white"};
     this.showAbout = this.showAbout.bind(this);
     this.showForm = this.showForm.bind(this);
     this.showHome= this.showHome.bind(this);
   }
 
-  showForm(category){
+  showForm(category, startColor){
     this.setState({screen: 3});
     this.setState({category: category});
+    this.setState({bgcolor: startColor})
   }
 
    showAbout(){
@@ -39,11 +40,13 @@ class App extends Component {
 
   render() {
 
-
+   var bgstyle ={
+    backgroundColor : this.state.bgcolor 
+   }
     const screen = this.state.screen
     if(screen===1 ){
       return (
-    <div className="container" id="container" > 
+    <div className="container" id="container" style={bgstyle} > 
     <div className="navbar" >
       <Navbar showAbout={this.showAbout} />
     </div> 
@@ -62,7 +65,7 @@ class App extends Component {
 
     }else if(screen===2){
       return (
-    <div className="container" id="container" > 
+    <div className="container" id="container"  style={bgstyle}> 
     <div className="navbar" >
       <Navbar showAbout={this.showAbout} / >
     </div> 
@@ -82,7 +85,7 @@ class App extends Component {
     }
     else if(screen===3){
       return (
-    <div className="container" id="container" > 
+    <div className="container" id="container" style={bgstyle}> 
     <div className="navbar" >
       <Navbar showAbout={this.showAbout} />
     </div> 

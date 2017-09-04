@@ -6,6 +6,10 @@
 	color: #4A4A4A ;
 }
 
+
+.white{
+	color : white !important;
+}
 .corner{
 	float: right;
 	width: 10px;
@@ -78,6 +82,8 @@ grid-template-columns: 1fr 1fr;
      margin: 50px;
      background-color: white;
       box-shadow: 2px 2px 20px 10px #efefef;
+
+      transition: background-color 1s ;
 
      
 
@@ -172,6 +178,8 @@ height:100%;
 	      " b "
 	      ;
 
+	       transition: background-color 1s ;
+
 	}
 
 	.navbar{
@@ -183,7 +191,7 @@ height:100%;
 	}
 
 	.content{
-
+    
 		  padding-top: 5%;
 
 	}
