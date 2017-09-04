@@ -22,6 +22,7 @@ class App extends Component {
     this.showAbout = this.showAbout.bind(this);
     this.showForm = this.showForm.bind(this);
     this.showHome= this.showHome.bind(this);
+      this.showAck= this.showAck.bind(this);
   }
 
   showForm(category, startColor){
@@ -34,8 +35,15 @@ class App extends Component {
     this.setState({screen: 2});
   }
 
+ 
+
     showHome(){
     this.setState({screen: 1});
+  }
+
+    showAck(){
+    this.setState({screen: 4});
+    console.log("ACL");
   }
 
   render() {
@@ -92,7 +100,7 @@ class App extends Component {
 
     <div className="content" >
       {/*<Content/> */}
-      <FormComponent/>
+      <FormComponent onClick={this.showAck} />
     </div>
 
      <div className="bubblemenu" >
@@ -102,6 +110,21 @@ class App extends Component {
     </div> 
     );
 
+    }
+
+    else if(screen===4){
+
+      <div className="container" id="container" style={bgstyle} > 
+    <div className="navbar" >
+      <Navbar showAbout={this.showAbout} />
+    </div> 
+    
+    <div className="content" >
+      {/*<Content/> */}
+      <h1>Drag and Pop.</h1>
+      <h3>Choose the bubble which is bothering you right now.<br/>Trust us, we can help.</h3>
+    </div>
+    </div>
     }
     
   }

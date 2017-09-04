@@ -176,9 +176,9 @@ function move(id, typex){
        >
       <div>
      <Bubble onClick={()=>this.burst(bubbles[0].id , bubbles)} myID={bubbles[0].id} bubbleText ={bubbles[0].bubbleText} type={bubbles[0].type} size={bubbles[0].size} shade={bubbles[0].shade} />
-      <Bubble onClick={()=>this.burst(bubbles[1].id, bubbles)}  myID={bubbles[1].id} bubbleText ={bubbles[1].bubbleText}  bubbleText2 = {bubbles[1].bubbleText} type={bubbles[1].type} size={bubbles[1].size} shade={bubbles[1].shade}/>
-       <Bubble  onClick={()=>this.burst(bubbles[2].id, bubbles)}  myID={bubbles[2].id} bubbleText = {bubbles[2].bubbleText} bubbleText2 = {bubbles[2].bubbleText}type={bubbles[2].type}  size={bubbles[2].size}  shade={bubbles[2].shade}/>
-      <Bubble onClick={()=>this.burst(bubbles[3].id , bubbles)} myID={bubbles[3].id} bubbleText ={bubbles[3].bubbleText} bubbleText2 = {bubbles[3].bubbleText} type={bubbles[3].type} size={bubbles[3].size} shade={bubbles[3].shade} />
+      <Bubble onClick={()=>this.burst(bubbles[1].id, bubbles)}  myID={bubbles[1].id} bubbleText ={bubbles[1].bubbleText}  bubbleText2 = {bubbles[1].bubbleText2} type={bubbles[1].type} size={bubbles[1].size} shade={bubbles[1].shade}/>
+       <Bubble  onClick={()=>this.burst(bubbles[2].id, bubbles)}  myID={bubbles[2].id} bubbleText = {bubbles[2].bubbleText} bubbleText2 = {bubbles[2].bubbleText2}type={bubbles[2].type}  size={bubbles[2].size}  shade={bubbles[2].shade}/>
+      <Bubble onClick={()=>this.burst(bubbles[3].id , bubbles)} myID={bubbles[3].id} bubbleText ={bubbles[3].bubbleText} bubbleText2 = {bubbles[3].bubbleText2} type={bubbles[3].type} size={bubbles[3].size} shade={bubbles[3].shade} />
     <Bubble onClick={()=>this.burst(bubbles[4].id ,bubbles)}  myID={bubbles[4].id} bubbleText ={bubbles[4].bubbleText}  type={bubbles[4].type}  size={bubbles[4].size} shade={bubbles[4].shade}/>
       
       </div>
