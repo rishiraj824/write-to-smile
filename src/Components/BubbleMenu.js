@@ -4,6 +4,7 @@ import './Bubbles.css';
 import {TweenMax, Elastic, TweenLite,Linear} from "gsap";
 import Draggable from "gsap/Draggable";
 import Animate from 'react-simple-animate';
+import Sound from 'react-sound';
 
 
 let type1 = {
@@ -95,9 +96,19 @@ var bubbles = [ { id : "bubble0" , shade : { startColor : "#10DC0F" , endColor: 
 
 class BubbleMenu extends Component {
 
-
+  constructor(props){
+    super(props);
+    this.state = {
+      status:Sound.status.STOPPED,
+      sound:false
+    }
+  }
   burst(id , bubbles ) {
- 
+  this.setState({
+    status:Sound.status.PLAYING,
+    sound:true
+  })
+  console.log(this.state);
   for(var i = 0 ; i < bubbles.length ; i++){
  
       
@@ -108,12 +119,8 @@ class BubbleMenu extends Component {
       else{
          TweenMax.to('#'+ bubbles[i].id, 10, { y:-1000, fillOpacity: 0 });
       }
-
-  
-
-
-  } 
-    console.log(startColor);
+  }
+  console.log(startColor);
      this.props.showForm(id, startColor) ;
    }
 
@@ -180,7 +187,11 @@ function move(id, typex){
        <Bubble  onClick={()=>this.burst(bubbles[2].id, bubbles)}  myID={bubbles[2].id} bubbleText = {bubbles[2].bubbleText} bubbleText2 = {bubbles[2].bubbleText2}type={bubbles[2].type}  size={bubbles[2].size}  shade={bubbles[2].shade}/>
       <Bubble onClick={()=>this.burst(bubbles[3].id , bubbles)} myID={bubbles[3].id} bubbleText ={bubbles[3].bubbleText} bubbleText2 = {bubbles[3].bubbleText2} type={bubbles[3].type} size={bubbles[3].size} shade={bubbles[3].shade} />
     <Bubble onClick={()=>this.burst(bubbles[4].id ,bubbles)}  myID={bubbles[4].id} bubbleText ={bubbles[4].bubbleText}  type={bubbles[4].type}  size={bubbles[4].size} shade={bubbles[4].shade}/>
-      
+      {this.state.sound && <Sound
+      url="http://soundbible.com/mp3/Gum_Bubble_Pop-Sound_Explorer-1206462561.mp3"
+      playStatus={this.state.status}
+      onFinishedPlaying={() => this.setState({sound: false})}
+    />}
       </div>
       </Animate>
     );
