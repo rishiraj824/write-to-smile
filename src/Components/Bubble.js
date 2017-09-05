@@ -34,11 +34,11 @@ class Bubble extends Component {
 <svg onClick={this.props.onClick} id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient cy="35.16%" fx="0%" fy="35.16%" r="59.77%" gradientTransform="matrix(0 1 -.99958 0 .85 -.148)" id= {this.props.myID +"a" }>
-      <stop stopColor= {shade.startColor } offset="29%"/>
+      <stop stopColor= {shade.startColor } offset="10%"/>
       <stop stopColor={shade.endColor } offset="100%"/>
     </radialGradient>
     <radialGradient cy="100%" fx="50%" fy="100%" r="84.13%" gradientTransform="matrix(0 -1 1.78743 0 -1.287 1.5)" id={this.props.myID +"b" }>
-      <stop stopColor={shade.startColor }  stopOpacity="0" offset="0%"/>
+      <stop stopColor={shade.startColor }  stopOpacity="0" offset="1%"/>
       <stop stopColor="#FFF" offset="100%"/>
     </radialGradient>
     <linearGradient x1="2.91%" y1="0%" x2="109.78%" y2="28.01%" id={this.props.myID +"c" }>

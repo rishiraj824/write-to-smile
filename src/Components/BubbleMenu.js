@@ -74,7 +74,7 @@ let type5 = {
 
 
 let small ={
-  length: "20%"
+  length: "22%"
 
 }
 
@@ -87,10 +87,10 @@ let large ={
 }
 
 
-var bubbles = [ { id : "bubble0" , shade : { startColor : "#10DC0F" , endColor: "#CFFF5C" } , type: type1 , size : small , bubbleText :"Legal"  }, 
+var bubbles = [ { id : "bubble0" , shade : { startColor : "#8957FC" , endColor: "#4FB4FF" } , type: type1 , size : small , bubbleText :"Legal"  }, 
                 { id : "bubble1" , shade : {startColor : "#2D2DE4" , endColor: "#FF67C1" }, type: type2 , size : large , bubbleText :"Career" , bubbleText2 :"Counselling"}, 
                 { id : "bubble2" , shade : {startColor : "#FFE8C2" , endColor: "#FF6B9E" }, type: type3 , size : large , bubbleText : "Sexual" ,bubbleText2 : "Orientation"}, 
-                { id : "bubble3" , shade : {startColor : "#FFFB65" , endColor: "#FF2A2A" }, type: type4 , size : medium, bubbleText :"Mental" ,bubbleText2 : "Wellness"}, 
+                { id : "bubble3" , shade : {startColor : "#FFFB65" , endColor: "#54FFAB" }, type: type4 , size : medium, bubbleText :"Mental" ,bubbleText2 : "Wellness"}, 
                 { id : "bubble4" , shade : {startColor : "#4CFF61" , endColor: "#369FEE" }, type: type5 , size : medium, bubbleText :"Relationships" }] ;
 
 

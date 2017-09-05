@@ -11,6 +11,11 @@
 .white{
 	color : white !important;
 }
+
+.mui-textfield>input, .mui-textfield>textarea {
+	color : white !important;
+}
+
 .corner{
 	float: right;
 	width: 10px;
@@ -179,7 +184,7 @@ height:100%;
 	      " b "
 	      ;
 
-	       transition: background-color 1s ;
+	  transition: all 2s ;
 
 	}
 
