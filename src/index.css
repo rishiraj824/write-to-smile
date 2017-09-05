@@ -114,11 +114,11 @@ height:100%;
 
 .outlineButton{
 	 background-color: transparent;
-     border: 2px solid #6CCECB; 
+     border: 2px solid white; 
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
     min-height: 55px !important;
-    color: #6CCECB;
+    color: white;
     padding: 10px 60px !important;
     text-align: center;
     text-decoration: none;
@@ -131,8 +131,8 @@ height:100%;
 }
 
 .outlineButton:hover{
-	color : white;
-	background-color:#6CCECB ;
+	color : #6CCECB;
+	background-color:white ;
 	transition : all 250ms;
 
 }
@@ -166,6 +166,7 @@ height:100%;
 		transition: background-color 3s;
 	}
 	.container{
+		opacity: 0;
 		 margin: 0px;
      position: relative;
       box-shadow: none;

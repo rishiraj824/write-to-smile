@@ -108,20 +108,23 @@ class BubbleMenu extends Component {
     status:Sound.status.PLAYING,
     sound:true
   })
-  console.log(this.state);
+  
+  
+
   for(var i = 0 ; i < bubbles.length ; i++){
  
       
       if( bubbles[i].id === id ){
       TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(0.9, 0.9) ,scale:0, rotation:0, fillOpacity: 0});
-      var startColor = bubbles[i].shade.endColor ; 
+      var shade = bubbles[i].shade
       }
       else{
+
          TweenMax.to('#'+ bubbles[i].id, 10, { y:-1000, fillOpacity: 0 });
+         Draggable.get('#'+ bubbles[i].id).disable();
       }
   }
-  console.log(startColor);
-     this.props.showForm(id, startColor) ;
+     this.props.showForm(id, shade) ;
    }
 
   componentDidMount() {

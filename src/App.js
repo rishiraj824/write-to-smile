@@ -18,17 +18,17 @@ class App extends Component {
    
   constructor(props){
     super(props);
-    this.state = {screen: 1 , category : -1, bgcolor: "white"};
+    this.state = {screen: 1 , category : -1, bgcolor: { startColor: "white", endColor: "white" } };
     this.showAbout = this.showAbout.bind(this);
     this.showForm = this.showForm.bind(this);
     this.showHome= this.showHome.bind(this);
       this.showAck= this.showAck.bind(this);
   }
 
-  showForm(category, startColor){
+  showForm(category, shade){
     this.setState({screen: 3});
     this.setState({category: category});
-    this.setState({bgcolor: startColor})
+    this.setState({bgcolor: shade});
   }
 
    showAbout(){
@@ -47,9 +47,10 @@ class App extends Component {
   }
 
   render() {
-
+   var gradient = "linear-gradient(141deg, " + this.state.bgcolor.endColor + " 0%, "+this.state.bgcolor.startColor+" 75%)"
    var bgstyle ={
-    backgroundColor : this.state.bgcolor 
+    background : gradient ,
+    
    }
     const screen = this.state.screen
     if(screen===1 ){
@@ -99,7 +100,7 @@ class App extends Component {
 
     <div className="content" >
       {/*<Content/> */}
-      <FormComponent onClick={this.showAck} />
+      <FormComponent onClick={this.showAck} buttonColor = {this.state.bgcolor}/>
     </div>
 
      <div className="bubblemenu" >
