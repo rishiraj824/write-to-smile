@@ -115,7 +115,7 @@ class BubbleMenu extends Component {
  
       
       if( bubbles[i].id === id ){
-      TweenLite.to('#'+id, 0.6, { ease: Elastic.easeIn.config(0.9, 0.9) ,scale:0, rotation:0, fillOpacity: 0});
+      TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.9, 0.5) ,scale:0, rotation:0, fillOpacity: 0});
       var shade = bubbles[i].shade
       }
       else{
