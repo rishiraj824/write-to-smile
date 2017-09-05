@@ -5,6 +5,7 @@ import Content from './Components/Content';
 import Navbar from './Components/Navbar';
 import FormComponent from './Components/FormComponent'
 import BubbleMenu from './Components/BubbleMenu';
+import Cat from './Components/Cat';
 import Animate from 'react-simple-animate';
 
 
@@ -136,9 +137,9 @@ class App extends Component {
       <h3>Definetely we'll help you out.</h3>
     </div>
         </Animate>
-  <div className="bubblemenu" style={{ opacity: 0}} >
-      <BubbleMenu showForm ={this.showForm}/> 
-    </div>
+ 
+      <Cat/> 
+  
     </div>
 
     );

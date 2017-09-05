@@ -60,6 +60,14 @@
 
 }
 
+.cat{
+	width: 80%;
+	padding: 10%;
+}
+
+.catContainer{
+width: 100%;
+}
 
 .logo:hover{
 	opacity: 1;
@@ -78,6 +86,8 @@ display: grid;
 position: fixed;
 bottom:0;
 top:0;
+left: 0;
+right: 0;
 grid-template-columns: 1fr 1fr;
   grid-template-rows: 100px auto ; 
   grid-template-areas: 
@@ -159,6 +169,9 @@ height:100%;
 
 
 @media only screen and (max-width: 600px) {
+
+	
+
 
 	.aboutLink{
 		top:5%;
