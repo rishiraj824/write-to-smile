@@ -117,7 +117,6 @@ height:100%;
      border: 2px solid white; 
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
-    min-height: 55px !important;
     color: white;
     padding: 10px 60px !important;
     text-align: center;
@@ -166,7 +165,7 @@ height:100%;
 		transition: background-color 3s;
 	}
 	.container{
-		opacity: 0;
+
 		 margin: 0px;
      position: relative;
       box-shadow: none;
