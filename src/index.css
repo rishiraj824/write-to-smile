@@ -28,7 +28,7 @@
 	position: fixed;
 	top:14%;
 	right: 65px;
- 	color: #909090 ;
+ 	color: #4A4A4A ;
  	transition: 1s;
  	font-family: 'Varela Round';
 	font-size: 18px;
@@ -55,8 +55,6 @@
 	height: 60px;
 	padding-left: 5%;
 	padding-top: 5%;
-	opacity: 0.6;
-	transition: opacity 1s;
 
 }
 
@@ -69,10 +67,7 @@
 width: 100%;
 }
 
-.logo:hover{
-	opacity: 1;
-	transition: opacity 1s;
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -110,6 +105,7 @@ grid-template-columns: 1fr 1fr;
 .bubblemenu{
 grid-area: b;
 //background-color: red;
+
 
 }
 
@@ -151,6 +147,30 @@ height:100%;
 
 }
 
+.outlineButtonBlue{
+	 background-color: transparent;
+     border: 2px solid #6CCECB; 
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    color: #6CCECB;
+    padding: 10px 60px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition : all 250ms;
+    border-radius: 4px;
+}
+
+.outlineButtonBlue:hover{
+	color : white;
+	background-color:#6CCECB ;
+	transition : all 250ms;
+
+}
+
 .content h1{
 	font-family: 'Baloo Bhaijaan', sans-serif;
 	font-size: 50px;
@@ -174,6 +194,7 @@ height:100%;
 
 
 	.aboutLink{
+		position: absolute;
 		top:5%;
 		right: 5%;
 	}
