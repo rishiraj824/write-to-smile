@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+.droplets{
 
+  position: fixed;
+  top: 0;
+  left:0;
+  opacity: 0;
+  width: 100%;
+}
 
     #bubble0{
    opacity: 0.85;
@@ -11,7 +18,7 @@
 
   #bubble1{
     
-       opacity: 0.85;
+   opacity: 0.85;
 
    cursor:pointer;
 
@@ -36,12 +43,22 @@
   #bubble4{
   
       opacity: 0.85;
-      
+
    cursor:pointer;
   }
 
 
 @media only screen and (max-width: 600px){
+
+.droplets{
+
+  position: fixed;
+  top: 0;
+  left:0;
+  opacity: 0;
+  width: auto;
+  height:  100%;
+}
 
 
     #bubble0{

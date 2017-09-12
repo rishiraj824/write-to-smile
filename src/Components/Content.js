@@ -15,7 +15,7 @@ class Content extends Component {
            opacity: 1,
          }}
        >
-      <div>
+      <div id="content" >
       <h1>Drag and Pop{'\u00A0'}</h1>
       <h3>Choose the bubble which is bothering you right now.</h3>
       <h3>It helps. Trust us.</h3>

@@ -94,20 +94,41 @@ var bubbles = [ { id : "bubble0" , shade : { startColor : "#8957FC" , endColor: 
                 { id : "bubble4" , shade : {startColor : "#4CFF61" , endColor: "#369FEE" }, type: type5 , size : medium, bubbleText :"Relationships" }] ;
 
 
+
+
 class BubbleMenu extends Component {
 
   constructor(props){
     super(props);
     this.state = {
       status:Sound.status.STOPPED,
-      sound:false
+      sound:false,
+      drops:false
     }
+
+    this.splash = this.splash.bind(this);
   }
-  burst(id , bubbles ) {
+
+   removeDrops(){
+  TweenMax.to('#droplets', 1, {scale:0} );
+}
+
+
+
+
+   splash(){
   this.setState({
     status:Sound.status.PLAYING,
     sound:true
-  })
+  });
+
+  TweenMax.to('#droplets', 2.5, {bezier:[{opacity:0},{opacity: 0.5 }, {opacity:0}],repeat:0, onComplete:this.removeDrops });
+
+}
+
+  burst(id , bubbles ) {
+
+  
   
   
 
@@ -115,20 +136,21 @@ class BubbleMenu extends Component {
  
       
       if( bubbles[i].id === id ){
-      TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.9, 0.5) ,scale:0, rotation:0, fillOpacity: 0});
-      var shade = bubbles[i].shade
+        TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.9, 0.5) ,scale:1.4, rotation:0, opacity: 0 ,onComplete:this.splash });
+        var shade = bubbles[i].shade;
       }
       else{
-
          TweenMax.to('#'+ bubbles[i].id, 10, { y:-1000, fillOpacity: 0 });
          Draggable.get('#'+ bubbles[i].id).disable();
       }
   }
+
      this.props.showForm(id, shade) ;
-   }
+       }
 
   componentDidMount() {
   window.onload = function(){
+
 
 
 var bubble1 = Draggable.create("#bubble1" )[0] ;
@@ -136,6 +158,7 @@ var bubble2 = Draggable.create("#bubble2" )[0] ;
 var bubble3 = Draggable.create("#bubble3" )[0] ;
 var bubble4 = Draggable.create("#bubble4" )[0] ;
 var bubble0 = Draggable.create("#bubble0" )[0] ;
+
 
 bubble1.addEventListener("dragend", move("#bubble1" , type1) );
 bubble2.addEventListener("dragend", move("#bubble2" , type2) );
@@ -173,7 +196,7 @@ function move(id, typex){
 }
 
   render() {
-    return (
+      return (
       <Animate durationSeconds={0.2}
          startAnimation
          delaySeconds={0.5}
@@ -184,6 +207,7 @@ function move(id, typex){
            opacity: 1,
          }}
        >
+       <img src='./droplets.png' className='droplets' id='droplets' />
       <div>
      <Bubble onClick={()=>this.burst(bubbles[0].id , bubbles)} myID={bubbles[0].id} bubbleText ={bubbles[0].bubbleText} type={bubbles[0].type} size={bubbles[0].size} shade={bubbles[0].shade} />
       <Bubble onClick={()=>this.burst(bubbles[1].id, bubbles)}  myID={bubbles[1].id} bubbleText ={bubbles[1].bubbleText}  bubbleText2 = {bubbles[1].bubbleText2} type={bubbles[1].type} size={bubbles[1].size} shade={bubbles[1].shade}/>
@@ -196,8 +220,11 @@ function move(id, typex){
       onFinishedPlaying={() => this.setState({sound: false})}
     />}
       </div>
+
       </Animate>
     );
+   
+    
   }
 }
 
