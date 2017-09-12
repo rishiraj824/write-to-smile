@@ -59,7 +59,7 @@ class App extends Component {
   render() {
    var gradient = "linear-gradient(141deg, " + this.state.bgcolor.endColor + " 0%, "+this.state.bgcolor.startColor+" 75%)"
    var bgstyle ={
-    background : gradient
+    backgroundColor :this.state.bgcolor.endColor
    }
 
     const screen = this.state.screen
