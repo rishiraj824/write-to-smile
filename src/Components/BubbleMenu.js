@@ -122,7 +122,7 @@ class BubbleMenu extends Component {
     sound:true
   });
 
-  TweenMax.to('#droplets', 2.5, {bezier:[{opacity:0},{opacity: 0.5 }, {opacity:0}],repeat:0, onComplete:this.removeDrops });
+  TweenMax.to('#droplets', 2.5, {bezier:[{opacity: 0.2 }, {opacity:0}],repeat:0, onComplete:this.removeDrops });
 
 }
 
@@ -136,7 +136,7 @@ class BubbleMenu extends Component {
  
       
       if( bubbles[i].id === id ){
-        TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.9, 0.5) ,scale:1.4, rotation:0, opacity: 0 ,onComplete:this.splash });
+        TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.2, 0.5) ,scale:10, rotation:0, opacity: 0 ,onComplete:this.splash });
         var shade = bubbles[i].shade;
       }
       else{
