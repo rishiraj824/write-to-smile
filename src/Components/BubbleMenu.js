@@ -8,7 +8,7 @@ import Sound from 'react-sound';
 
 
 let type1 = {
-    x1: 100 , 
+    x1: 100 ,
     y1: 100 ,
     x2: 0 ,
     y2: 200 ,
@@ -16,11 +16,11 @@ let type1 = {
     y3: 100 ,
     x4: 0 ,
     y4: 0,
-    s:15 
+    s:15
 };
 
 let type2 = {
-    x1: -100 , 
+    x1: -100 ,
     y1: -100 ,
     x2: 0 ,
     y2: -200 ,
@@ -33,7 +33,7 @@ let type2 = {
 
 
 let type3 = {
-    x1: 50 , 
+    x1: 50 ,
     y1: 50 ,
     x2: 0 ,
     y2: 100 ,
@@ -46,7 +46,7 @@ let type3 = {
 
 
 let type4 = {
-    x1: 50 , 
+    x1: 50 ,
     y1: 50 ,
     x2: 100 ,
     y2: 0 ,
@@ -59,7 +59,7 @@ let type4 = {
 
 
 let type5 = {
-    x1: 70 , 
+    x1: 70 ,
     y1: 70 ,
     x2: 0 ,
     y2: 50 ,
@@ -83,14 +83,14 @@ let medium ={
 }
 
 let large ={
-  length: "35%", 
+  length: "35%",
 }
 
 
-var bubbles = [ { id : "bubble0" , shade : { startColor : "#8957FC" , endColor: "#4FB4FF" } , type: type1 , size : small , bubbleText :"Legal"  }, 
-                { id : "bubble1" , shade : {startColor : "#2D2DE4" , endColor: "#FF67C1" }, type: type2 , size : large , bubbleText :"Career" , bubbleText2 :"Counselling"}, 
-                { id : "bubble2" , shade : {startColor : "#FFE8C2" , endColor: "#FF6B9E" }, type: type3 , size : large , bubbleText : "Sexual" ,bubbleText2 : "Orientation"}, 
-                { id : "bubble3" , shade : {startColor : "#FFFB65" , endColor: "#54FFAB" }, type: type4 , size : medium, bubbleText :"Mental" ,bubbleText2 : "Wellness"}, 
+var bubbles = [ { id : "bubble0" , shade : { startColor : "#8957FC" , endColor: "#4FB4FF" } , type: type1 , size : small , bubbleText :"Legal"  },
+                { id : "bubble1" , shade : {startColor : "#2D2DE4" , endColor: "#FF67C1" }, type: type2 , size : large , bubbleText :"Career" , bubbleText2 :"Counselling"},
+                { id : "bubble2" , shade : {startColor : "#FFE8C2" , endColor: "#FF6B9E" }, type: type3 , size : large , bubbleText : "Sexual" ,bubbleText2 : "Orientation"},
+                { id : "bubble3" , shade : {startColor : "#FFFB65" , endColor: "#54FFAB" }, type: type4 , size : medium, bubbleText :"Mental" ,bubbleText2 : "Wellness"},
                 { id : "bubble4" , shade : {startColor : "#4CFF61" , endColor: "#369FEE" }, type: type5 , size : medium, bubbleText :"Relationships" }] ;
 
 
@@ -128,20 +128,16 @@ class BubbleMenu extends Component {
 
   burst(id , bubbles ) {
 
-  
-  
-  
+
+
+
 
   for(var i = 0 ; i < bubbles.length ; i++){
- 
-      
+
+
       if( bubbles[i].id === id ){
         TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.2, 0.5) ,scale:10, rotation:0, opacity: 0 ,onComplete:this.splash });
         var shade = bubbles[i].shade;
-      }
-      else{
-         TweenMax.to('#'+ bubbles[i].id, 10, { y:-1000, fillOpacity: 0 });
-         Draggable.get('#'+ bubbles[i].id).disable();
       }
   }
 
@@ -177,7 +173,7 @@ bubble0.addEventListener("drag", grow("#bubble0" ) );
 
 function grow(id){
   return function(){
-  
+
      TweenMax.to(id, 4, {scale:1.5} );
   }
 }
@@ -223,8 +219,8 @@ function move(id, typex){
 
       </Animate>
     );
-   
-    
+
+
   }
 }
 
