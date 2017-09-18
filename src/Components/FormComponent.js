@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
 import Textarea from 'muicss/lib/react/textarea';
-import Button from 'muicss/lib/react/button';
 import Animate from 'react-simple-animate';
 import './Form.css';
 class FormComponent extends Component {

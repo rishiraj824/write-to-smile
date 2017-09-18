@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import './index.css';
-import Content from './Components/Content';
 import Navbar from './Components/Navbar';
 import FormComponent from './Components/FormComponent'
 import BubbleMenu from './Components/BubbleMenu';
@@ -23,7 +22,7 @@ class App extends Component {
     this.showAbout = this.showAbout.bind(this);
     this.showForm = this.showForm.bind(this);
     this.showHome= this.showHome.bind(this);
-      this.showAck= this.showAck.bind(this);
+    this.showAck= this.showAck.bind(this);
 
   }
 
@@ -52,13 +51,11 @@ class App extends Component {
     showAck(){
     this.setState({screen: 4});
     this.setState({bgcolor: { startColor: "white", endColor: "white" }})
-    console.log("ACL");
     this.setState({logo : "logo-black.png"});
   }
 
   render() {
-   var gradient = "linear-gradient(141deg, " + this.state.bgcolor.endColor + " 0%, "+this.state.bgcolor.startColor+" 75%)"
-   var bgstyle ={
+   var bgstyle = {
     backgroundColor :this.state.bgcolor.endColor
    }
 
@@ -77,7 +74,7 @@ class App extends Component {
     </div>
 
     <div className="bubblemenu" >
-      <BubbleMenu showForm ={this.showForm}/>
+      <BubbleMenu showForm={this.showForm}/>
     </div>
     </div>
     );

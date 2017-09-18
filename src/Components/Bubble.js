@@ -3,35 +3,33 @@ import './Bubbles.css';
 import {TweenMax,  Linear} from "gsap";
 import PropTypes from 'prop-types';
 
-
-
-
 class Bubble extends Component {
 
-
-
-  constructor(props){
-    super(props);
-    console.log(this.props);
-
- }
-
-  componentDidMount() {
-
-  let type = this.props.type ; 
-  console.log(type.x1);
+componentDidMount() {
+let type = this.props.type ;
   TweenMax.to('#'+ this.props.myID, type.s, {bezier:[{x:type.x1, y:type.y1}, {x:type.x2, y:type.y2}, {x:type.x3, y:type.y3}, {x:type.x4, y:type.y4}], ease:Linear.easeNone ,repeat:-1} );
   //var myText = this.refs.bubbletext;
-  //myText.text = this.props.bubbletext ; 
-  
+  //myText.text = this.props.bubbletext ;
 }
 
-  render() {
+onClick=()=>{
+  this.splash();
+  //this.props.onClick();
+}
+splash=()=>{
+TweenMax.to('#droplets', 2.5, {bezier:[{opacity: 0.7 }, {opacity:0}],repeat:0, onComplete:this.removeDrops });
+}
+
+removeDrops=()=>{
+  TweenMax.to('#droplets', 1, {scale:0} );
+}
+render() {
 
     var shade = this.props.shade;
     return (
-   
-<svg onClick={this.props.onClick} id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
+  <span className='svg-container' width={this.props.size.length} height={this.props.size.length}>
+<img src='./droplets.png' alt='droplets' width={this.props.size.length} height={this.props.size.length} className='droplets' id='droplets' />
+<svg onClick={this.onClick} id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient cy="35.16%" fx="0%" fy="35.16%" r="59.77%" gradientTransform="matrix(0 1 -.99958 0 .85 -.148)" id= {this.props.myID +"a" }>
       <stop stopColor= {shade.startColor } offset="10%"/>
@@ -55,10 +53,11 @@ class Bubble extends Component {
     <text fontFamily="Varela Round Regular, Varela Round" fontSize="22" fontWeight="300" letterSpacing="3" fill="#FFF">
       <tspan textAnchor="middle"   x="50%" y="50%" dominantBaseline="middle">{this.props.bubbleText}</tspan>
       <tspan textAnchor="middle"   x="50%" y="62%" dominantBaseline="middle">{this.props.bubbleText2}</tspan>
-  
+
     </text>
   </g>
 </svg>
+</span>
     );
   }
 }

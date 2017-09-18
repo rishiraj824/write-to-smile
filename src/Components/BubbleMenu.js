@@ -105,47 +105,24 @@ class BubbleMenu extends Component {
       sound:false,
       drops:false
     }
-
-    this.splash = this.splash.bind(this);
   }
 
-   removeDrops(){
-  TweenMax.to('#droplets', 1, {scale:0} );
-}
+burst(id , bubbles ) {
 
-
-
-
-   splash(){
-  this.setState({
-    status:Sound.status.PLAYING,
-    sound:true
-  });
-
-  TweenMax.to('#droplets', 2.5, {bezier:[{opacity: 0.2 }, {opacity:0}],repeat:0, onComplete:this.removeDrops });
-
-}
-
-  burst(id , bubbles ) {
-
-
-
-
-
-  for(var i = 0 ; i < bubbles.length ; i++){
-
-
-      if( bubbles[i].id === id ){
-        TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.2, 0.5) ,scale:10, rotation:0, opacity: 0 ,onComplete:this.splash });
+    for(var i = 0 ; i < bubbles.length ; i++){
+    if( bubbles[i].id === id ){
+        TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.2, 0.5) ,scale:10, rotation:0, opacity: 0 });
         var shade = bubbles[i].shade;
       }
-  }
-
-     this.props.showForm(id, shade) ;
-       }
+    }
+    this.setState({
+      status:Sound.status.PLAYING,
+      sound:true
+    });
+    this.props.showForm(id, shade) ;
+ }
 
   componentDidMount() {
-  window.onload = function(){
 
 
 
@@ -186,8 +163,6 @@ function move(id, typex){
   }
 }
 
-  }
-
 
 }
 
@@ -203,7 +178,6 @@ function move(id, typex){
            opacity: 1,
          }}
        >
-       <img src='./droplets.png' className='droplets' id='droplets' />
       <div>
      <Bubble onClick={()=>this.burst(bubbles[0].id , bubbles)} myID={bubbles[0].id} bubbleText ={bubbles[0].bubbleText} type={bubbles[0].type} size={bubbles[0].size} shade={bubbles[0].shade} />
       <Bubble onClick={()=>this.burst(bubbles[1].id, bubbles)}  myID={bubbles[1].id} bubbleText ={bubbles[1].bubbleText}  bubbleText2 = {bubbles[1].bubbleText2} type={bubbles[1].type} size={bubbles[1].size} shade={bubbles[1].shade}/>
