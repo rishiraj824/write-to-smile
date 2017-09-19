@@ -113,19 +113,18 @@ burst(id , bubbles ) {
     if( bubbles[i].id === id ){
         TweenLite.to('#'+id, 0.7, { ease: Elastic.easeIn.config(0.2, 0.5) ,scale:10, rotation:0, opacity: 0 });
         var shade = bubbles[i].shade;
+        this.setState({
+          status:Sound.status.PLAYING,
+          sound:true
+        });
+        console.log(this.state);
       }
     }
-    this.setState({
-      status:Sound.status.PLAYING,
-      sound:true
-    });
+
     this.props.showForm(id, shade) ;
  }
 
   componentDidMount() {
-
-
-
 var bubble1 = Draggable.create("#bubble1" )[0] ;
 var bubble2 = Draggable.create("#bubble2" )[0] ;
 var bubble3 = Draggable.create("#bubble3" )[0] ;
@@ -150,8 +149,7 @@ bubble0.addEventListener("drag", grow("#bubble0" ) );
 
 function grow(id){
   return function(){
-
-     TweenMax.to(id, 4, {scale:1.5} );
+    TweenMax.to(id, 4, {scale:1.5} );
   }
 }
 

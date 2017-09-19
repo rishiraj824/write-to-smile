@@ -12,24 +12,11 @@ let type = this.props.type ;
   //myText.text = this.props.bubbletext ;
 }
 
-onClick=()=>{
-  this.splash();
-  //this.props.onClick();
-}
-splash=()=>{
-TweenMax.to('#droplets', 2.5, {bezier:[{opacity: 0.7 }, {opacity:0}],repeat:0, onComplete:this.removeDrops });
-}
-
-removeDrops=()=>{
-  TweenMax.to('#droplets', 1, {scale:0} );
-}
 render() {
 
     var shade = this.props.shade;
     return (
-  <span className='svg-container' width={this.props.size.length} height={this.props.size.length}>
-<img src='./droplets.png' alt='droplets' width={this.props.size.length} height={this.props.size.length} className='droplets' id='droplets' />
-<svg onClick={this.onClick} id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
+      <svg onClick={this.props.onClick} id = {this.props.myID} width={this.props.size.length} height={this.props.size.length} viewBox="0 0 209 209" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient cy="35.16%" fx="0%" fy="35.16%" r="59.77%" gradientTransform="matrix(0 1 -.99958 0 .85 -.148)" id= {this.props.myID +"a" }>
       <stop stopColor= {shade.startColor } offset="10%"/>
@@ -57,7 +44,6 @@ render() {
     </text>
   </g>
 </svg>
-</span>
     );
   }
 }
