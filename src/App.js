@@ -99,19 +99,22 @@ class App extends Component {
     );
     }else if(screen===3){
       return (
-    <div className="container" id="container" style={bgstyle}>
+    <div className="container" id="container" style={bgstyle}> 
     <div className="navbar" >
-      <Navbar showAbout={this.showAbout} logo={this.state.logo} />
-    </div>
+      <Navbar showAbout={this.showAbout} />
+    </div> 
 
     <div className="content" >
       {/*<Content/> */}
       <FormComponent onClick={this.showAck} buttonColor = {this.state.bgcolor}/>
     </div>
 
+     <div className="bubblemenu" >
+      <BubbleMenu showForm ={this.showForm}/> 
     </div>
+    
+    </div> 
     );
-
     }else if(screen===4){
 
     return (

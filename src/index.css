@@ -122,6 +122,14 @@ padding :10%;
 height:100%;
 }
 
+.form-section{
+	grid-area: c;
+//background-color: yellow;
+padding :10%;
+height:100%;
+
+}
+
 
 .outlineButton{
 	 background-color: transparent;

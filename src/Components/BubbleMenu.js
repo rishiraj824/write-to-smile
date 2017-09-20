@@ -119,6 +119,10 @@ burst(id , bubbles ) {
         });
         console.log(this.state);
       }
+      else{
+        TweenLite.to('#'+bubbles[i].id, 7, {y:-1000});
+     
+      }
     }
 
     this.props.showForm(id, shade) ;
