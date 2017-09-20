@@ -1,6 +1,6 @@
-
 import React, { Component } from 'react';
 import './index.css';
+import Content from './Components/Content';
 import Navbar from './Components/Navbar';
 import FormComponent from './Components/FormComponent'
 import BubbleMenu from './Components/BubbleMenu';
@@ -9,20 +9,20 @@ import Animate from 'react-simple-animate';
 
 
 
-
-
+ 
+  
 
 class App extends Component {
 
-
-
+ 
+   
   constructor(props){
     super(props);
     this.state = {screen: 1 , category : -1, bgcolor: { startColor: "white", endColor: "white" }, aboutLinkColor: "black" , logo : "logo-black.png" };
     this.showAbout = this.showAbout.bind(this);
     this.showForm = this.showForm.bind(this);
     this.showHome= this.showHome.bind(this);
-    this.showAck= this.showAck.bind(this);
+      this.showAck= this.showAck.bind(this);
 
   }
 
@@ -40,68 +40,71 @@ class App extends Component {
     this.setState({bgcolor: { startColor: "white", endColor: "white" }})
   }
 
-
+ 
 
     showHome(){
        this.state = {screen: 1 , category : -1, bgcolor: { startColor: "white", endColor: "white" }, aboutLinkColor: "black" , logo : "logo-black.png" };
-       this.setState({screen: 1});
+   
+    this.setState({screen: 1});
   }
 
     showAck(){
     this.setState({screen: 4});
     this.setState({bgcolor: { startColor: "white", endColor: "white" }})
+    console.log("ACL");
     this.setState({logo : "logo-black.png"});
   }
 
   render() {
-   var bgstyle = {
-    backgroundColor :this.state.bgcolor.endColor
+   var gradient = "linear-gradient(141deg, " + this.state.bgcolor.endColor + " 0%, "+this.state.bgcolor.startColor+" 75%)"
+   var bgstyle ={
+     backgroundColor :this.state.bgcolor.endColor
    }
 
     const screen = this.state.screen
     if(screen===1 ){
       return (
-    <div className="container" id="container" style={bgstyle} >
+    <div className="container" id="container" style={bgstyle} > 
     <div className="navbar" >
       <Navbar showAbout={this.showAbout} logo={this.state.logo} />
-    </div>
-
+    </div> 
+    
     <div className="content" >
       {/*<Content/> */}
       <h1>Drag and Pop.</h1>
       <h3>Choose the bubble which is bothering you right now.<br/>Trust us, we can help.</h3>
     </div>
-
+    
     <div className="bubblemenu" >
-      <BubbleMenu showForm={this.showForm}/>
+      <BubbleMenu showForm ={this.showForm}/> 
     </div>
-    </div>
+    </div> 
     );
 
     }else if(screen===2){
       return (
-    <div className="container" id="container"  style={bgstyle}>
+    <div className="container" id="container"  style={bgstyle}> 
     <div className="navbar" >
       <Navbar showAbout={this.showAbout} logo={this.state.logo} / >
-    </div>
+    </div> 
 
     <div className="content" >
-      <h1>write2smile</h1>
+      <h1>write2smile</h1> 
       <h3>Write2Smile exists to fight depression and stand by those who feel vulnerable. Introducing the concept of anonymous interactions & lay counseling, we aim to redefine the awareness regarding mental health wellness. Yes, we are listening, talk with us anytime, from anywhere and let the best answers reach you through experts.</h3>
       <h3>Feel free to contact us at hello@write2smile.org </h3>
-
+      
       <button onClick={this.showHome} className= "outlineButtonBlue"> Go Back </button>
     </div>
     <div className="bubblemenu">
-      <BubbleMenu showForm ={this.showForm} />
+      <BubbleMenu showForm ={this.showForm} /> 
     </div>
-    </div>
+    </div> 
     );
     }else if(screen===3){
       return (
     <div className="container" id="container" style={bgstyle}> 
     <div className="navbar" >
-      <Navbar showAbout={this.showAbout} />
+      <Navbar showAbout={this.showAbout} logo={this.state.logo} />
     </div> 
 
     <div className="content" >
@@ -115,15 +118,16 @@ class App extends Component {
     
     </div> 
     );
+
     }else if(screen===4){
 
     return (
 
-
-    <div className="container" id="container" style={bgstyle} >
+    
+    <div className="container" id="container" style={bgstyle} > 
     <div className="navbar"  >
       <Navbar showAbout={this.showAbout}   logo={this.state.logo}/>
-    </div>
+    </div> 
     <Animate durationSeconds={0.2}
          startAnimation
          delaySeconds={0.5}
@@ -133,7 +137,7 @@ class App extends Component {
          endStyle={{
            opacity: 1,
          }}
-       >
+       >  
     <div className="content" >
       {/*<Content/> */}
       <h1>Be strong.</h1>
@@ -141,15 +145,13 @@ class App extends Component {
        <button onClick={this.showHome} className= "outlineButtonBlue"> Home </button>
     </div>
         </Animate>
-
-      <Cat/>
-
+ 
+      <Cat/> 
+  
     </div>
-
     );
     }
-
+    
   }
 }
-
 export default App;
