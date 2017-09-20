@@ -43,9 +43,7 @@ class App extends Component {
  
 
     showHome(){
-       this.state = {screen: 1 , category : -1, bgcolor: { startColor: "white", endColor: "white" }, aboutLinkColor: "black" , logo : "logo-black.png" };
-   
-    this.setState({screen: 1});
+      window.location.reload();
   }
 
     showAck(){
