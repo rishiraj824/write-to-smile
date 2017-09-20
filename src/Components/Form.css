@@ -1,0 +1,10 @@
+
+.mui-textfield>input::placeholder, .mui-textfield>textarea::placeholder {
+    color: #f2f2f2 !important;
+}
+.form{
+  z-index: 999;
+}
+.mui-textfield>textarea:focus, .mui-textfield>input:focus {
+    border-color: #f2f2f2;
+}

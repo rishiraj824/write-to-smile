@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
 import Textarea from 'muicss/lib/react/textarea';
-import Button from 'muicss/lib/react/button';
 import Animate from 'react-simple-animate';
+import './Form.css';
 class FormComponent extends Component {
   render() {
 
-   
+
     return (
       <Animate durationSeconds={0.2}
          startAnimation
@@ -18,6 +18,7 @@ class FormComponent extends Component {
          endStyle={{
            opacity: 1,
          }}
+         className='form'
        >
         <Form>
         <legend className = "white" >Share your problem with us!</legend>
